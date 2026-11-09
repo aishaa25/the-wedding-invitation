@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light !important;
+  --bg-ivory: #F8F4EC;
+  --bg-paper: #FAF7F0;
+  --bg-soft-beige: #F1E9DD;
+  --text-brown: #40352F;
+  --text-muted: #7D6E63;
+  --gold-muted: #AE9366;
+  --gold-champagne: #D8C6A5;
+  --border-stone: #E7DDCE;
+}
+
+html, body {
+  background-color: #F8F4EC !important;
+  color: #40352F !important;
+  color-scheme: light !important;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+
+@layer utilities {
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+  .font-cinzel-dec {
+    font-family: 'Cinzel Decorative', serif;
+  }
+  .font-playfair {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  .font-cormorant {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+  .font-alex {
+    font-family: 'Alex Brush', cursive;
+  }
+  .font-pinyon {
+    font-family: 'Pinyon Script', cursive;
+  }
+  .font-greatvibes {
+    font-family: 'Great Vibes', cursive;
+  }
+  .font-arabic {
+    font-family: 'Amiri', serif;
+    direction: rtl;
+  }
+
+  .text-deep-brown {
+    color: #40352F;
+  }
+  .text-muted-gold {
+    color: #AE9366;
+  }
+  .text-champagne {
+    color: #D8C6A5;
+  }
+
+  /* Editorial Handmade Paper Presentation */
+  .editorial-paper {
+    background-color: #FAF7F0;
+    box-shadow: 
+      0 1px 3px rgba(64, 53, 47, 0.04),
+      0 15px 35px -10px rgba(64, 53, 47, 0.08),
+      0 30px 60px -20px rgba(174, 147, 102, 0.12);
+  }
+
+  .editorial-shadow-subtle {
+    box-shadow: 0 10px 30px -5px rgba(64, 53, 47, 0.06);
+  }
+
+  .editorial-hairline {
+    border-color: rgba(174, 147, 102, 0.35);
+  }
+
+  .animate-fadeInUp {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-softFloat {
+    animation: softFloat 4s ease-in-out infinite;
+  }
+
+  .animate-softGlow {
+    animation: softGlow 3.5s ease-in-out infinite;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes softFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes softGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(174, 147, 102, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(174, 147, 102, 0.35);
+  }
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F4EC;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8C6A5;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #AE9366;
+}
